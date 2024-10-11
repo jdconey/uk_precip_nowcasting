@@ -160,7 +160,5 @@ ofnames=sorted(os.listdir('gif/'))
 stills=[]
 for f in sorted(ofnames):
    if '.png' in f: 
-    print(f)
     stills.append(imageio.imread('gif/'+f))
-    print(stills[-1].shape)
 imageio.mimsave('gif2/forecast_today.gif', stills, duration=2,loop=0)
